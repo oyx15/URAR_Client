@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/accidentType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:text="@string/disaster_type"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+    <EditText
+         android:id="@+id/accident"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="10dp"
+         android:hint="@string/disaster"
+         android:ems="10" >
+
+         <requestFocus />
+     </EditText>
+
+    <TextView
+        android:id="@+id/injuredOrNot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/injured_or_not"
+        android:layout_marginTop="12dp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <RadioGroup
+        android:id="@+id/injuredType"
+        android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical">
+        <RadioButton
+        	android:id="@+id/serious"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="@string/seriously"/>
+
+    	<RadioButton
+        	android:id="@+id/notSerious"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="@string/not_serious"/>
+
+    	<RadioButton
+        	android:id="@+id/notInjured"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="@string/not_injured"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/others"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/others_injured"
+        android:layout_marginTop="12dp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+     <RadioGroup
+        android:id="@+id/othersInjureType"
+        android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical">
+    	
+    	<RadioButton
+        	android:id="@+id/yes"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="@string/yes" />
+
+    	<RadioButton
+        	android:id="@+id/no"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="@string/no"/>
+    </RadioGroup>
+
+     <Button
+         android:id="@+id/submit"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="12dp"
+         android:gravity="center"
+         android:text="@string/submit" />
+     
+</LinearLayout>

@@ -1,0 +1,67 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="edu.ece671.reportclient">
+
+    <uses-sdk android:minSdkVersion="18" android:targetSdkVersion="19"/>
+    
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+
+    <permission android:name="edu.ece671.mapexample.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
+	<uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED"/>
+    
+    
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.NFC"/>
+
+    <!--
+         The following two permissions are not required to use
+	     Google Maps Android API v2, but are recommended.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    
+    <!--
+         The following two permissions are used to write files and use socket.
+    -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    
+
+    <application android:allowBackup="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:theme="@style/AppTheme">
+        <activity android:label="@string/app_name" android:name="edu.ece671.reportclient.ReportAccident">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="edu.ece671.reportclient.ReportDetails"/>
+        <activity android:name="edu.ece671.reportclient.ShowLocation"/>
+        <activity android:name="edu.fglabs.perceptmapcad.PerceptMapFragment">
+        </activity>
+       <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="please enter your google key here"/>
+
+    <service android:enabled="true" android:exported="true" android:isolatedProcess="false" android:label="beacon" android:name="org.altbeacon.beacon.service.BeaconService">
+    </service>
+
+    <service android:enabled="true" android:name="org.altbeacon.beacon.BeaconIntentProcessor">
+    </service>
+    <receiver android:name="org.altbeacon.beacon.startup.StartupBroadcastReceiver">
+        <intent-filter>
+            <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+            <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+        </intent-filter>
+    </receiver>
+        
+        
+    </application>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+</manifest>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Report Client</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="uuid_label">UUID: </string>
+    <string name="major_id_label">Major: </string>
+    <string name="minor_id_label">Minor: </string>
+    <string name="rssi_reading_label">RSSI: </string>
+    <string name="distance_reading_label">Distance: </string>
+    <string name="beacon_type_gimbal">Gimbal</string>
+    <string name="beacon_type_radbeacon">RadBeacon</string>
+    <string name="beacon_type_estimote">Estimote</string>
+    <string name="search_result_default_string">SearchingTags</string>
+    <string name="welcome_text">Report!!!</string>
+    <string name="welcome_title">Report Accident</string>
+    <string name="ok">Yes</string>
+    <string name="cancel">Cancel</string>
+    <string name="disaster_type">Type of accident happened:</string>
+    <string name="injured_or_not">Are you injured or not?</string>
+    <string name="seriously">Yes, and seriously</string>
+    <string name="not_serious">Yes, but not seriously.</string>
+    <string name="not_injured">No.</string>
+    <string name="others_injured">Are there others injured?</string>
+    <string name="yes">Yes, there are.</string>
+    <string name="no">No, I do not know.</string>
+    <string name="disaster">Enter disaster type.</string>
+    <string name="send_picture">Send a picture.</string>
+    <string name="submit">Submit</string>
+    <string name="earthquake">Earthquake</string>
+    <string name="fire">Fire</string>
+    <string name="traffic">Traffic</string>
+    <string name="others">Others</string>
+    <string name="pickedup">Already picked up by the responder.</string>
+
+</resources>
